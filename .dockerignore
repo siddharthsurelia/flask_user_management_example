@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+env/
+instance/*.db
+instance/*.log
+instance/*.md
+tests/
+.coverage
+.gitignore
+*.md

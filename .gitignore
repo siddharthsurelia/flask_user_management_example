@@ -18,8 +18,7 @@ instance/*.log*
 .coverage
 
 # Virtual Environment
-/venv/
+/env/
 
 # pytest files
 .pytest_cache/
-

@@ -10,10 +10,10 @@ def test_new_user():
     WHEN a new User is created
     THEN check the email, password_hashed, authenticated, and active fields are defined correctly
     """
-    user = User('patkennedy79@gmail.com', 'FlaskIsAwesome')
-    assert user.email == 'patkennedy79@gmail.com'
+    user = User('testuser@gmail.com', 'FlaskIsAwesome')
+    assert user.email == 'testuser@gmail.com'
     assert user.password_hashed != 'FlaskIsAwesome'
-    assert user.__repr__() == '<User: patkennedy79@gmail.com>'
+    assert user.__repr__() == '<User: testuser@gmail.com>'
     assert user.is_authenticated
     assert user.is_active
     assert not user.is_anonymous
@@ -25,7 +25,7 @@ def test_new_user_with_fixture(new_user):
     WHEN a new User is created
     THEN check the email and password_hashed fields are defined correctly
     """
-    assert new_user.email == 'patkennedy79@gmail.com'
+    assert new_user.email == 'testuser@gmail.com'
     assert new_user.password_hashed != 'FlaskIsAwesome'
 
 

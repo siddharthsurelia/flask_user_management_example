@@ -12,7 +12,7 @@ from project.models import Book, User
 
 @pytest.fixture(scope='module')
 def new_user():
-    user = User('patkennedy79@gmail.com', 'FlaskIsAwesome')
+    user = User('testuser@gmail.com', 'FlaskIsAwesome')
     return user
 
 
@@ -35,7 +35,7 @@ def init_database(test_client):
     db.create_all()
 
     # Insert user data
-    default_user = User(email='patkennedy79@gmail.com', password_plaintext='FlaskIsAwesome')
+    default_user = User(email='testuser@gmail.com', password_plaintext='FlaskIsAwesome')
     second_user = User(email='patrick@yahoo.com', password_plaintext='FlaskIsTheBest987')
     db.session.add(default_user)
     db.session.add(second_user)
@@ -62,7 +62,7 @@ def init_database(test_client):
 @pytest.fixture(scope='function')
 def log_in_default_user(test_client):
     test_client.post('/login',
-                     data={'email': 'patkennedy79@gmail.com', 'password': 'FlaskIsAwesome'})
+                     data={'email': 'testuser@gmail.com', 'password': 'FlaskIsAwesome'})
 
     yield  # this is where the testing happens!
 
