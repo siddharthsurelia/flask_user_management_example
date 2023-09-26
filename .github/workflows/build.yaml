@@ -11,8 +11,6 @@ jobs:
         steps:
             - name: Checkout
               uses: actions/checkout@master
-              with:
-                ref: master
 
             - name: Install dependencies
               run: |
